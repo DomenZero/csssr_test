@@ -42,9 +42,10 @@ class csssrTests(unittest.TestCase):
 		# for tag in soup.find_all(re.compile("http[s]?^")):
 		# 	print(tag.name)
 
-		link=soup.find("input",id="soft")
+		link=soup.find("input",id="soft").find_next("a")
 
-		print(link.find_next('a', 'href'))
+		# print(link.find_next("a"))
+		print(link["href"])
 
 		# for link1 in link.find_next_siblings("a"):
 		# 	  if "app" in link1["href"]:
